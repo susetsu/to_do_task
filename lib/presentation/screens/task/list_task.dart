@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
 import 'package:todo_list_bloc/config/config.dart';
 import 'package:todo_list_bloc/infrastructure/models/task.dart';
@@ -91,7 +92,28 @@ class _TaskListBuilder extends StatelessWidget {
               child: Text(
                   "Ocurrió un error cargando la información intente nuevamente"));
         } else {
-          return const Center(child: Text("No se ha encontrado información"));
+          return FadeIn(
+            child: Center(
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              verticalDirection: VerticalDirection.down,
+              children: <Widget>[
+                Text(
+                  "No se ha encontrado información",
+                  style: theme.textTheme.titleMedium,
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 50),
+                SvgPicture.asset(
+                  ('assets/images/not-found.svg'),
+                  height: 250,
+                  width: 250,
+                ),
+              ],
+            )),
+          );
         }
       },
     );
@@ -100,7 +122,6 @@ class _TaskListBuilder extends StatelessWidget {
 
 class _TaskListView extends StatelessWidget {
   const _TaskListView({
-    super.key,
     required this.theme,
     required this.task,
   });

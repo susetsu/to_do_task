@@ -131,7 +131,7 @@ class _MakeTaskBody extends StatelessWidget {
     required this.formKey,
     required this.nameValue,
     required this.dateValue,
-    this.endDateValue = null,
+    this.endDateValue,
     this.isCompletedValue = false,
   });
 
