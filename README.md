@@ -139,6 +139,8 @@ Para actualizar librerias obsoletas ejecute el siguiente comando:
 
 * [animate_do - Animaciones](https://pub.dev/packages/animate_do)
 
+* [flutter_svg - Dibuja archivos SVG usando Flutter.](https://pub.dev/packages/flutter_svg)
+
 * [intl - Proporciona funciones de internacionalización y localización, incluida la traducción de mensajes, plurales y géneros, formato y análisis de fecha/número y texto bidireccional.](https://pub.dev/packages/intl)
 
 * [flutter_bloc - Widgets que facilitan la integración de bloques y codos en Flutter . Creados para funcionar con package:bloc.](https://pub.dev/packages/flutter_bloc)
